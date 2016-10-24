@@ -517,7 +517,7 @@ within `fitInto` boundaries, while preserving the element's CSS margin values.
 
     __getPosition: function(hAlign, vAlign, size, positionRect, fitRect) {
       // All the possible configurations.
-      // Ordered as top-left, top-right, bottom-left, bottom-right.
+      // Ordered as top-left, top-right, bottom-right, bottom-left.
       var positions = [{
         verticalAlign: 'top',
         horizontalAlign: 'left',
@@ -530,14 +530,14 @@ within `fitInto` boundaries, while preserving the element's CSS margin values.
         left: positionRect.right - size.width - this.horizontalOffset
       }, {
         verticalAlign: 'bottom',
-        horizontalAlign: 'left',
-        top: positionRect.bottom - size.height - this.verticalOffset,
-        left: positionRect.left + this.horizontalOffset
-      }, {
-        verticalAlign: 'bottom',
         horizontalAlign: 'right',
         top: positionRect.bottom - size.height - this.verticalOffset,
         left: positionRect.right - size.width - this.horizontalOffset
+      }, {
+        verticalAlign: 'bottom',
+        horizontalAlign: 'left',
+        top: positionRect.bottom - size.height - this.verticalOffset,
+        left: positionRect.left + this.horizontalOffset
       }];
 
       if (this.noOverlap) {
